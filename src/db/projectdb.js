@@ -76,7 +76,7 @@ export const ProjectList = [
   },
   {
     heading: "MULTILINGUAL-WEATHER-DASHOARD",
-    images: "ApI.png.jpeg",
+    images: "ApI.png",
     title: "multilingual-weather-dashboard",
     description:
       "This is a straightforward weather application constructed with React that enables users to view the current weather and forecast for a specific location using the OpenWeatherMap API.",
@@ -86,7 +86,7 @@ export const ProjectList = [
   },
   {
     heading: "GlOBAL SUMMIT",
-    images: "Globol.png.jpeg",
+    images: "Globol.png",
     title: "global summit ",
     description:
       "This is my first capstone project in microverse About Creative Commons Global Summit for 2015.",
@@ -96,7 +96,7 @@ export const ProjectList = [
   },
   {
     heading: "MATH-MAGICIANS",
-    images: "Math.png.jpeg",
+    images: "Math.png",
     title: "math-magicians",
     description:
       "Math magicians This a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.",
