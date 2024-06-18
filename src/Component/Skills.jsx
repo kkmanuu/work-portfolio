@@ -17,7 +17,10 @@ import {
   tailwind,
   typescript,
   mySQL,
-  chakra 
+  RubyRails,
+  Rspec,
+  Bootstrap,
+  Testing
   // Ensure this is imported
 } from "../db/techstack";
 
@@ -36,9 +39,12 @@ export default function Skills() {
     express,
     node,
     redux,
-    chakra,
     git,
-    mySQL
+    mySQL,
+    RubyRails,
+    Rspec,
+    Bootstrap,
+    Testing
   ];
 
   return (
