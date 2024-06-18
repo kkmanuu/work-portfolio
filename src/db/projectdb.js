@@ -14,8 +14,7 @@ import {
   redux,
   tailwind,
   typescript,
-  Ruby,
-  Rails,
+  RubyRails,
   Javascript,
   Bootstrap
 } from "./techstack";
@@ -38,7 +37,7 @@ export const ProjectList = [
     title: "CAR-BOOKING-WEBSITE",
     description:
       " An application programming interface (API) tailored for car rental services streamlines the integration of rental functionalities into various applications or systems. It empowers users to execute essential tasks associated with vehicle rental, including reservation and inventory management.",
-    techStack: [node, Rails, Ruby, react, redux, html , tailwind, css, javascript],
+    techStack: [node, RubyRails, react, redux, html , tailwind, css, javascript],
     liveLink: "https://wheels-4-rentv1.onrender.com/",
     gitLink: "https://github.com/kkmanuu/Wheels-4-Rent-backend",
     gitLink: "https://github.com/kkmanuu/Wheels-4-Rent-frontend",
