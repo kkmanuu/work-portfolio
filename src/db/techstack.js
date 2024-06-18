@@ -29,12 +29,6 @@ export const react = {
   swid: "40%",
 };
 
-export const chakra = {
-  title: "Chakra UI",
-  img: "https://img.icons8.com/color/512/chakra-ui.png",
-  wid: "75%",
-  swid: "40%",
-};
 
 export const redux = {
   title: "Redux",
@@ -122,20 +116,30 @@ export const mySQL = {
   swid: "35%",
 };
 
-export const Rails = {
-  title: "Rails",
+export const Testing= {
+  title: "Testing capybara",
+  img: "/images/Testing.jpeg",
+  wid: "50%",
+  swid: "80%",
 }
 
-export const Javascript = {
-  title: "Javascript",
-  images: "Next.js.jpeg",
-}
-
-export const Bootstrap = {
+export const  Bootstrap = {
   title: "Bootstrap",
+  img: "/images/Boostrap.jpeg",
+  wid: "5%",
+  swid: "60%",
 }
 
-export const Ruby = {
-  title: "Ruby",
-  images: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3Djavascript%2BLogo&psig=AOvVaw0AEfNXv9vGj9p4lsWcySEk&ust=1718699701132000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLic9Lud4oYDFQAAAAAdAAAAABAE",
+export const Rspec = {
+  title: "Rspec",
+  img: "/images/Rspec.jpeg",
+  wid: "5%",
+  swid: "75%",
+}
+
+export const RubyRails= {
+  title: "RubyRails",
+  img: "/images/Ruby.jpeg",
+  wid: "55%",
+  swid: "75%",
 }
