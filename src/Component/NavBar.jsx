@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import resume from "./../Banner//Emmanuel_kipngeno_Resume 2.pdf";
+import resume from "./../Banner//Emmanuel_kipngeno_Resume (7).pdf";
 import { Link as ScrollLink } from "react-scroll";
 
 export const NavBar = () => {
@@ -164,7 +164,7 @@ export const NavBar = () => {
                   className="nav-link contact"
                   onClick={() =>
                     window.open(
-                      "https://docs.google.com/document/d/1fHWcg4djbTvUe_VOYhN87fQxXgdVnCX0bycBaoV7HoQ/edit"
+                      "file:///C:/Users/USER/Downloads/Emmanuel_Resume%20(4).pdf"
                     )
                   }
                   
