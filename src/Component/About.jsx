@@ -8,11 +8,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import imgOlive from "./../Banner/port.jpeg.jpeg";
-import resume from "./../Banner//Emmanuel_kipngeno_Resume 2.pdf";
+import resume from "./../Banner/Emmanuel_kipngeno_Resume (7).pdf";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
-
 
 export default function About() {
   const theme = useContext(ThemeContext);
@@ -57,9 +56,9 @@ export default function About() {
             letterSpacing="1px"
             color={theme.theme.dText}
           >
-           A diligent and enthusiastic full-stack engineer. I can help you to build a product , 
-           feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,
-          don’t hesitate to contact me.
+            A diligent and enthusiastic full-stack engineer. I can help you to build a product, 
+            feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded,
+            don’t hesitate to contact me.
           </Text>
         </Box>
         <Box p="5px 15px" fontWeight="bolder" color="white">
@@ -77,11 +76,6 @@ export default function About() {
               borderRadius="0px"
               mt="10px"
               id="resume-button-2"
-              onClick={() =>
-                window.open(
-                  "https://docs.google.com/document/d/1fHWcg4djbTvUe_VOYhN87fQxXgdVnCX0bycBaoV7HoQ/edit"
-                )
-              }
             >
               Resume
             </Button>
