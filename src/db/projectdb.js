@@ -22,15 +22,27 @@ import {
 
 export const ProjectList = [
   {
-    heading: "TODO",
-    images: "Todo lists.png.png",
+    heading: "Ondashelf",
+    images: "shelf.png",
     title: "TODO-LISTS",
     description:
-      "Efficient JavaScript To-Do List with Status Updates: An enhanced version featuring task management, status updates, and local storage persistence. Users can add, delete, and edit tasks, mark them as completed/incomplete with checkboxes, and easily clear completed tasks. ",
+      "This app is designed to streamline your kitchen management by helping you keep track of your pantry items, generate recipes, and manage meals efficiently. Built with cutting-edge technologies like Next.js, Tailwind CSS, and Material UI, it also leverages AI to offer advanced features that make your kitchen smarter. ",
     techStack: [nextjs, tailwind, html, css,javascript],
-    liveLink: "https://kkmanuu.github.io/To-Do-Lists/dist/",
-    gitLink: "https://github.com/kkmanuu/To-Do-Lists",
+    liveLink: "https://pantrytracker.vercel.app/",
+    gitLink: "https://github.com/Spidey-Acer/pantry-tracker",
   },
+
+  {
+    heading: "MULTILINGUAL-WEATHER-DASHOARD",
+    images: "ApI.png",
+    title: "multilingual-weather-dashboard",
+    description:
+      "This is a straightforward weather application constructed with React that enables users to view the current weather and forecast for a specific location using the OpenWeatherMap API.",
+    techStack: [react,typescript,node,javascript,],
+    liveLink: "https://multilingual-weather-dashboard.onrender.com/",
+    gitLink: "https://github.com/kkmanuu/multilingual-weather-dashboard",
+  },
+
   {
     heading: "CAR WEBSITE",
     images: "Screenshot (6).png",
@@ -42,6 +54,29 @@ export const ProjectList = [
     gitLink: "https://github.com/kkmanuu/Wheels-4-Rent-backend",
     gitLink: "https://github.com/kkmanuu/Wheels-4-Rent-frontend",
   },
+
+  {
+    heading: "TODO",
+    images: "Todo lists.png.png",
+    title: "TODO-LISTS",
+    description:
+      "Efficient JavaScript To-Do List with Status Updates: An enhanced version featuring task management, status updates, and local storage persistence. Users can add, delete, and edit tasks, mark them as completed/incomplete with checkboxes, and easily clear completed tasks. ",
+    techStack: [nextjs, tailwind, html, css,javascript],
+    liveLink: "https://kkmanuu.github.io/To-Do-Lists/dist/",
+    gitLink: "https://github.com/kkmanuu/To-Do-Lists",
+  },
+
+  {
+    heading: "SCORES",
+    images: "MLeaady..png",
+    title: "LEADERBOARD",
+    description:
+      "The leaderboard website displays scores submitted by different players and It also allows you to submit your score.",
+    techStack: [nextjs, tailwind, html, css,javascript],
+    liveLink: "https://kkmanuu.github.io/Leaderboard/dist/",
+    gitLink: "https://github.com/kkmanuu/Leaderboard",
+  },
+ 
   {
     heading: " TRADING",
     images: "Screenshot (7)crypto.png",
@@ -63,26 +98,7 @@ export const ProjectList = [
     liveLink: 'https://bookstore-bg5v.onrender.com/',
     sourceLink: 'https://github.com/kkmanuu/bookstore',
   },
-  {
-    heading: "SCORES",
-    images: "MLeaady..png",
-    title: "LEADERBOARD",
-    description:
-      "The leaderboard website displays scores submitted by different players and It also allows you to submit your score.",
-    techStack: [nextjs, tailwind, html, css,javascript],
-    liveLink: "https://kkmanuu.github.io/Leaderboard/dist/",
-    gitLink: "https://github.com/kkmanuu/Leaderboard",
-  },
-  {
-    heading: "MULTILINGUAL-WEATHER-DASHOARD",
-    images: "ApI.png",
-    title: "multilingual-weather-dashboard",
-    description:
-      "This is a straightforward weather application constructed with React that enables users to view the current weather and forecast for a specific location using the OpenWeatherMap API.",
-    techStack: [react,typescript,node,javascript,],
-    liveLink: "https://multilingual-weather-dashboard.onrender.com/",
-    gitLink: "https://github.com/kkmanuu/multilingual-weather-dashboard",
-  },
+ 
   {
     heading: "GlOBAL SUMMIT",
     images: "Globol.png",
