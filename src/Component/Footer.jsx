@@ -98,6 +98,7 @@ export default function Footer() {
       }
     }
 
+    
     if (count === 10) {
       return true;
     }
