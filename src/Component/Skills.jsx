@@ -10,8 +10,6 @@ import {
   javascript,
   nextjs,
   node,
-  promptEngineering,
-  python,
   react,
   redux,
   tailwind,
