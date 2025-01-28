@@ -109,11 +109,11 @@ export const promptEngineering = {
   swid: "35%",
 };
 
-export const mySQL = {
-  title: "MySQL",
-  img: "https://www.notion.so/image/https%3A%2F%2Fpngimg.com%2Fd%2Fmysql_PNG9.png?table=block&id=27e6b5e3-e888-4802-9c0b-2e5ca6bdf31a&spaceId=5247e3c7-a9ff-4596-9c82-e08b13f4ea9d&width=250&userId=af1a9bd4-c5ca-4c4b-88f4-f0e87ce2512a&cache=v2",
+export const  mySQL = {
+  title: " mySQL",
+  img:"/images/msql.jpg",
   wid: "70%",
-  swid: "35%",
+  swid: "60%",
 };
 
 export const Testing= {
