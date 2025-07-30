@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Grid, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Text,
+  Image,
+} from "@chakra-ui/react";
 import { ThemeContext } from "./ThemeContext";
 import { useContext, useRef, useEffect } from "react";
 import { ProjectList } from "../db/projectdb";
@@ -13,6 +21,8 @@ export default function Project() {
   const boxRef = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 768) return; // Skip heavy animation on small devices
+
     const cards = boxRef.current.querySelectorAll(".project-card");
 
     cards.forEach((card, index) => {
@@ -26,8 +36,6 @@ export default function Project() {
         scrollTrigger: {
           trigger: card,
           start: "top 85%",
-          end: "top 60%",
-          scrub: 1,
           toggleActions: "play none none reverse",
         },
       });
@@ -38,7 +46,7 @@ export default function Project() {
         scale: 1,
         duration: 0.6,
         ease: "ease-in-out",
-        delay: index * 0.15,
+        delay: index * 0.1,
       });
 
       const image = card.querySelector("img");
@@ -52,28 +60,10 @@ export default function Project() {
         },
       });
 
-      card.addEventListener("mouseenter", () => {
-        gsap.to(card, {
-          scale: 1.02,
-          boxShadow: "0 6px 20px rgba(0, 121, 107, 0.25)",
-          duration: 0.3,
-          ease: "ease-in-out",
-        });
-      });
-
-      card.addEventListener("mouseleave", () => {
-        gsap.to(card, {
-          scale: 1,
-          boxShadow: "0 2px 6px rgba(99, 99, 99, 0.2)",
-          duration: 0.3,
-          ease: "ease-in-out",
-        });
-      });
-
       const contentElements = card.querySelectorAll(
         ".project-title, .project-description, .project-tech-stack, .project-github-link, .project-deployed-link"
       );
-      
+
       gsap.from(contentElements, {
         opacity: 0,
         y: 15,
@@ -100,9 +90,9 @@ export default function Project() {
       id="projects"
       minH="100vh"
     >
-      <Box 
-        w="80%" 
-        margin="auto" 
+      <Box
+        w="80%"
+        margin="auto"
         borderTop="2px solid #00796B"
         opacity={0}
         ref={(el) => {
@@ -190,9 +180,9 @@ export default function Project() {
                     {project.heading}
                   </Heading>
                 </Box>
-                <Box 
-                  pb="15px" 
-                  w="70%" 
+                <Box
+                  pb="15px"
+                  w="70%"
                   borderTop="2px solid #00796B"
                   mx="auto"
                 />
@@ -203,13 +193,12 @@ export default function Project() {
                       _hover={{ transform: "scale(1.03)" }}
                       transition="transform 0.3s ease-in-out"
                     >
-                      <img
-                        style={{ 
-                          width: "100%",
-                          objectFit: "cover",
-                          borderRadius: "6px",
-                          height: "150px",
-                        }}
+                      <Image
+                        loading="lazy"
+                        width="100%"
+                        height="150px"
+                        objectFit="cover"
+                        borderRadius="6px"
                         src={`${process.env.PUBLIC_URL}/images/${project.images}`}
                         alt={project.heading}
                       />
@@ -217,16 +206,16 @@ export default function Project() {
                   </Link>
                 </Box>
                 <Box p={{ base: "8px 0", md: "12px 0" }}>
-                  <Text 
-                    fontWeight="semibold" 
-                    m="6px 0" 
+                  <Text
+                    fontWeight="semibold"
+                    m="6px 0"
                     color="#00796B"
                     fontSize={{ base: "sm", md: "md" }}
                   >
                     {project.title}
                   </Text>
-                  <Box 
-                    w="60%" 
+                  <Box
+                    w="60%"
                     borderTop="2px solid #00796B"
                     mx="auto"
                   />
@@ -240,15 +229,15 @@ export default function Project() {
                   </Text>
                 </Box>
                 <Box className="project-tech-stack">
-                  <Heading 
-                    size={{ base: "xs", md: "sm" }} 
+                  <Heading
+                    size={{ base: "xs", md: "sm" }}
                     color="#00796B"
                     mb="6px"
                   >
                     Tech Stack
                   </Heading>
-                  <Box 
-                    w="60%" 
+                  <Box
+                    w="60%"
                     borderTop="2px solid #00796B"
                     mx="auto"
                   />
@@ -263,42 +252,36 @@ export default function Project() {
                     }}
                     textAlign="center"
                   >
-                    {project.techStack?.map((tech) => {
-                      return (
-                        <Box key={tech.title}>
-                          <Flex 
-                            justifyContent="center"
-                            alignItems="center"
-                            p="3px"
-                          >
-                            {(tech?.title === "Express" ||
-                              tech?.title === "Next.js") &&
-                            (mainTheme?.theme.bg === "black" ||
-                              mainTheme?.theme.bg === "#08105B") ? (
-                              tech?.svg({ 
-                                size: "2rem", 
-                                color: "#757575" 
-                              })
-                            ) : (
-                              <img
-                                src={tech.img}
-                                style={{ 
-                                  width: tech.wid,
-                                  maxWidth: "30px",
-                                  transition: "transform 0.3s ease-in-out",
-                                }}
-                                alt={tech.title}
-                                className="tech-icon"
-                              />
-                            )}
-                          </Flex>
-                        </Box>
-                      );
-                    })}
+                    {project.techStack?.map((tech) => (
+                      <Box key={tech.title}>
+                        <Flex
+                          justifyContent="center"
+                          alignItems="center"
+                          p="3px"
+                        >
+                          {(tech?.title === "Express" ||
+                            tech?.title === "Next.js") &&
+                          (mainTheme?.theme.bg === "black" ||
+                            mainTheme?.theme.bg === "#08105B") ? (
+                            tech?.svg({ size: "2rem", color: "#757575" })
+                          ) : (
+                            <Image
+                              src={tech.img}
+                              alt={tech.title}
+                              width={tech.wid || "30px"}
+                              maxW="30px"
+                              transition="transform 0.3s ease-in-out"
+                              className="tech-icon"
+                              loading="lazy"
+                            />
+                          )}
+                        </Flex>
+                      </Box>
+                    ))}
                   </Grid>
                 </Box>
                 <Box m={{ base: "12px 0", md: "16px 0" }} zIndex={1}>
-                  <Flex 
+                  <Flex
                     justify="space-between"
                     gap={{ base: "8px", md: "12px" }}
                     flexWrap="wrap"
@@ -306,22 +289,30 @@ export default function Project() {
                   >
                     {project.gitLink && (
                       <Box flex="1" minW="100px">
-                        <a target="_blank" href={project.gitLink} rel="noopener noreferrer">
+                        <a
+                          target="_blank"
+                          href={project.gitLink}
+                          rel="noopener noreferrer"
+                        >
                           <Button
                             className="project-github-link"
                             bg="#00796B"
-                            color={mainTheme.theme.cardBg || mainTheme.theme.bg}
+                            color={
+                              mainTheme.theme.cardBg || mainTheme.theme.bg
+                            }
                             border="2px solid #00796B"
                             borderRadius="8px"
                             px={{ base: "16px", md: "24px" }}
                             py={{ base: "8px", md: "12px" }}
                             fontSize={{ base: "sm", md: "md" }}
                             w="100%"
-                            _hover={{ 
-                              bg: mainTheme.theme.cardBg || mainTheme.theme.bg,
+                            _hover={{
+                              bg:
+                                mainTheme.theme.cardBg || mainTheme.theme.bg,
                               color: "#00796B",
                               transform: "translateY(-3px)",
-                              boxShadow: "0 6px 12px rgba(0, 121, 107, 0.3)",
+                              boxShadow:
+                                "0 6px 12px rgba(0, 121, 107, 0.3)",
                             }}
                             transition="all 0.3s ease-in-out"
                           >
@@ -332,22 +323,30 @@ export default function Project() {
                     )}
                     {project.sourceLink && (
                       <Box flex="1" minW="100px">
-                        <a target="_blank" href={project.sourceLink} rel="noopener noreferrer">
+                        <a
+                          target="_blank"
+                          href={project.sourceLink}
+                          rel="noopener noreferrer"
+                        >
                           <Button
                             className="project-github-link"
                             bg="#00796B"
-                            color={mainTheme.theme.cardBg || mainTheme.theme.bg}
+                            color={
+                              mainTheme.theme.cardBg || mainTheme.theme.bg
+                            }
                             border="2px solid #00796B"
                             borderRadius="8px"
                             px={{ base: "16px", md: "24px" }}
                             py={{ base: "8px", md: "12px" }}
                             fontSize={{ base: "sm", md: "md" }}
                             w="100%"
-                            _hover={{ 
-                              bg: mainTheme.theme.cardBg || mainTheme.theme.bg,
+                            _hover={{
+                              bg:
+                                mainTheme.theme.cardBg || mainTheme.theme.bg,
                               color: "#00796B",
                               transform: "translateY(-3px)",
-                              boxShadow: "0 6px 12px rgba(0, 121, 107, 0.3)",
+                              boxShadow:
+                                "0 6px 12px rgba(0, 121, 107, 0.3)",
                             }}
                             transition="all 0.3s ease-in-out"
                           >
@@ -357,22 +356,30 @@ export default function Project() {
                       </Box>
                     )}
                     <Box flex="1" minW="100px">
-                      <a target="_blank" href={project.liveLink} rel="noopener noreferrer">
+                      <a
+                        target="_blank"
+                        href={project.liveLink}
+                        rel="noopener noreferrer"
+                      >
                         <Button
                           className="project-deployed-link"
                           bg="#26A69A"
-                          color={mainTheme.theme.cardBg || mainTheme.theme.bg}
+                          color={
+                            mainTheme.theme.cardBg || mainTheme.theme.bg
+                          }
                           border="2px solid #26A69A"
                           borderRadius="8px"
                           px={{ base: "16px", md: "24px" }}
                           py={{ base: "8px", md: "12px" }}
                           fontSize={{ base: "sm", md: "md" }}
                           w="100%"
-                          _hover={{ 
-                            bg: mainTheme.theme.cardBg || mainTheme.theme.bg,
+                          _hover={{
+                            bg:
+                              mainTheme.theme.cardBg || mainTheme.theme.bg,
                             color: "#26A69A",
                             transform: "translateY(-3px)",
-                            boxShadow: "0 6px 12px rgba(38, 166, 154, 0.3)",
+                            boxShadow:
+                              "0 6px 12px rgba(38, 166, 154, 0.3)",
                           }}
                           transition="all 0.3s ease-in-out"
                         >
