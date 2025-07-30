@@ -56,9 +56,10 @@ export default function About() {
             letterSpacing="1px"
             color={theme.theme.dText}
           >
-            A diligent and enthusiastic full-stack engineer. I can help you to build a product, 
-            feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded,
-            don’t hesitate to contact me.
+            A diligent and enthusiastic full-stack engineer. I can help you to
+            build a product, feature or website. Look through some of my work
+            and experience! If you like what you see and have a project you need
+            coded, don’t hesitate to contact me.
           </Text>
         </Box>
         <Box p="5px 15px" fontWeight="bolder" color="white">
