@@ -83,7 +83,9 @@ export const NavBar = () => {
               duration={500}
               onClick={onClose}
             >
-              <Text _hover={{cursor:'pointer'}} className="nav-link home">HOME</Text>
+              <Text _hover={{ cursor: "pointer" }} className="nav-link home">
+                HOME
+              </Text>
             </ScrollLink>
           </Box>
           <Box
@@ -98,7 +100,9 @@ export const NavBar = () => {
               duration={500}
               onClick={onClose}
             >
-              <Text _hover={{cursor:'pointer'}} className="nav-link about">ABOUT</Text>
+              <Text _hover={{ cursor: "pointer" }} className="nav-link about">
+                ABOUT
+              </Text>
             </ScrollLink>
           </Box>
           <Box
@@ -113,7 +117,9 @@ export const NavBar = () => {
               duration={500}
               onClick={onClose}
             >
-              <Text _hover={{cursor:'pointer'}} className="nav-link skills">SKILLS</Text>
+              <Text _hover={{ cursor: "pointer" }} className="nav-link skills">
+                SKILLS
+              </Text>
             </ScrollLink>
           </Box>
           <Box
@@ -128,7 +134,12 @@ export const NavBar = () => {
               duration={500}
               onClick={onClose}
             >
-              <Text className="nav-link projects" _hover={{cursor:'pointer'}}>PROJECTS</Text>
+              <Text
+                className="nav-link projects"
+                _hover={{ cursor: "pointer" }}
+              >
+                PROJECTS
+              </Text>
             </ScrollLink>
           </Box>
           <Box
@@ -143,7 +154,9 @@ export const NavBar = () => {
               duration={500}
               onClick={onClose}
             >
-              <Text className="nav-link contact" _hover={{cursor:'pointer'}}>CONTACT</Text>
+              <Text className="nav-link contact" _hover={{ cursor: "pointer" }}>
+                CONTACT
+              </Text>
             </ScrollLink>
           </Box>
           <Box
@@ -152,13 +165,12 @@ export const NavBar = () => {
             fontWeight="bolder"
             color="#00695C"
           >
-            <Box className="nav-link resume" >
+            <Box className="nav-link resume">
               <Link
                 href={resume}
                 target="_blank"
                 download="Emmanuel-Kipngeno-Resume"
                 id="resume-link-1"
-                
               >
                 <Text
                   className="nav-link contact"
@@ -167,7 +179,6 @@ export const NavBar = () => {
                       "file:///C:/Users/USER/Downloads/Emmanuel_Resume%20(4).pdf"
                     )
                   }
-                  
                 >
                   RESUME
                 </Text>
@@ -295,10 +306,7 @@ export const NavBar = () => {
               fontWeight="bolder"
               color="white"
             >
-              <a
-                href={resume}
-                download="Sumat-Mallick-Resume"
-              >
+              <a href={resume} download="Sumat-Mallick-Resume">
                 <Button
                   background="none"
                   color="white"

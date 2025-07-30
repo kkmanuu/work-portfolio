@@ -50,7 +50,7 @@ export default function Intro() {
         className="about section"
         background={theme && theme.bg}
         p="15px"
-        h = '80vh'
+        h="80vh"
       >
         <Popover>
           <PopoverTrigger>
@@ -201,7 +201,7 @@ export default function Intro() {
             textAlign="center"
           >
             <motion.div variants={item}>
-              <Box mb="10px" mt ='1rem'>
+              <Box mb="10px" mt="1rem">
                 <Text fontWeight="bold" color="#00796B" fontSize="2xl">
                   Hello, I am
                 </Text>
@@ -222,32 +222,31 @@ export default function Intro() {
                 </Text>
               </Box>
             </motion.div>
-            <motion.div variants={item} >
-             <Box mt = '2rem'>
-             <Text
-                fontWeight="500"
-                fontSize="35px"
-                display="inline"
-                color="#00796B"
-                id="user-detail-name"
-                letterSpacing="2px"
-                
-              >
-                <Typewriter
-                  words={[
-                    "A Full-Stack Developer.", 
-                    "Make it work, make it right, make it fast.",
-                  ]}
-                  loop={false}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={150}
-                  cursorBlinking	= {true}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </Text>
-             </Box>
+            <motion.div variants={item}>
+              <Box mt="2rem">
+                <Text
+                  fontWeight="500"
+                  fontSize="35px"
+                  display="inline"
+                  color="#00796B"
+                  id="user-detail-name"
+                  letterSpacing="2px"
+                >
+                  <Typewriter
+                    words={[
+                      "A Full-Stack Developer.",
+                      "Make it work, make it right, make it fast.",
+                    ]}
+                    loop={false}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={150}
+                    cursorBlinking={true}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
+                </Text>
+              </Box>
             </motion.div>
           </Flex>
 

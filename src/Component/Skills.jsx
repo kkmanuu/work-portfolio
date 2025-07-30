@@ -18,7 +18,7 @@ import {
   RubyRails,
   Rspec,
   Bootstrap,
-  Testing
+  Testing,
   // Ensure this is imported
 } from "../db/techstack";
 
@@ -42,7 +42,7 @@ export default function Skills() {
     RubyRails,
     Rspec,
     Bootstrap,
-    Testing
+    Testing,
   ];
 
   return (
@@ -81,15 +81,18 @@ export default function Skills() {
                 className="skills-card"
               >
                 <Flex justifyContent="center">
-                  {(skill.title === 'Express' || skill.title === "Next.js") &&
-                  (mainTheme?.theme.bg === 'black' || mainTheme?.theme.bg === "#08105B")
-                    ? skill?.svg({ size: '4rem', color: '#757575' })
-                    : <img
-                        className="skills-card-img"
-                        style={{ width: skill.swid, fill: 'red' }}
-                        src={skill.img}
-                        alt={skill.title}
-                      />}
+                  {(skill.title === "Express" || skill.title === "Next.js") &&
+                  (mainTheme?.theme.bg === "black" ||
+                    mainTheme?.theme.bg === "#08105B") ? (
+                    skill?.svg({ size: "4rem", color: "#757575" })
+                  ) : (
+                    <img
+                      className="skills-card-img"
+                      style={{ width: skill.swid, fill: "red" }}
+                      src={skill.img}
+                      alt={skill.title}
+                    />
+                  )}
                 </Flex>
                 <Box alignContent="center" p="15px">
                   <Heading

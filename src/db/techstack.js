@@ -29,7 +29,6 @@ export const react = {
   swid: "40%",
 };
 
-
 export const redux = {
   title: "Redux",
   img: "https://cdn.iconscout.com/icon/free/png-256/free-redux-283024.png",
@@ -109,37 +108,37 @@ export const promptEngineering = {
   swid: "35%",
 };
 
-export const  mySQL = {
+export const mySQL = {
   title: " mySQL",
-  img:"/images/msql.jpg",
+  img: "/images/msql.jpg",
   wid: "70%",
   swid: "60%",
 };
 
-export const Testing= {
+export const Testing = {
   title: "Testing capybara",
   img: "/images/Testing.jpeg",
   wid: "50%",
   swid: "80%",
-}
+};
 
-export const  Bootstrap = {
+export const Bootstrap = {
   title: "Bootstrap",
   img: "/images/Boostrap.jpeg",
   wid: "5%",
   swid: "60%",
-}
+};
 
 export const Rspec = {
   title: "Rspec",
   img: "/images/Rspec.jpeg",
   wid: "5%",
   swid: "75%",
-}
+};
 
-export const RubyRails= {
+export const RubyRails = {
   title: "RubyRails",
   img: "/images/Ruby.jpeg",
   wid: "55%",
   swid: "75%",
-}
+};
